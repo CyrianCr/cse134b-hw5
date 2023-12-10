@@ -53,9 +53,9 @@ starsContainer.addEventListener('click', function(event) {
         selectedRatingInput.value = '0';
     }
     if (selectedRatingInput.value === '0' || selectedRatingInput.value === '1' || selectedRatingInput.value === '2' || selectedRatingInput.value === '3' ) {
-        ratingOutput.textContent = "Thank you for your feedback "+rating+" stars. We will do better!";}
+        ratingOutput.textContent = "Thank you for your feedback "+selectedRatingInput.value+" stars. We will do better!";}
     else if (selectedRatingInput.value === '4' || selectedRatingInput.value === '5' ) {
-        ratingOutput.textContent = "Thank you for "+rating+" rating!";
+        ratingOutput.textContent = "Thank you for "+selectedRatingInput.value+" rating!";
     }
 
     const sentByInput = document.getElementById('sentByInput'); // Define sentByInput here
