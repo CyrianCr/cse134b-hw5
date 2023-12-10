@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Component</title>
+    <link rel="stylesheet" href="./css/web.css">
+</head>
+<body>
+
+    <h1>Rating widget</h1>
+<section>
+    <noscript>
+        <rating-widget>
+            <form action="https://httpbin.org/post" method="POST"> 
+                <label>How satisfied are you?</label> 
+                <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+                <input type="hidden" name= "question" value= "How satisfied are you?">
+                <input type="hidden" name= "sentBy" value= "HTML"> 
+                <button id="submitButton" type="submit">Submit</button> 
+            </form>
+        </rating-widget>
+    </noscript>
+    <rating-widget>
+    <form id="ratingForm">
+        <fieldset>
+        <legend>How satisfied are you?</legend>
+        <input type="hidden" id="rating">
+        <input type="hidden" name="question" value="How satisfied are you?">
+        <input type="hidden" id="selectedRating" name="rating" value="0" required>
+        <input type="hidden" name="sentBy" id="sentByInput" value="">
+
+        <div class="rating">
+            <div class="stars" id="stars">
+                <span class="star" data-value="1">&#10023;</span>
+                <span class="star" data-value="2">&#10023;</span>
+                <span class="star" data-value="3">&#10023;</span>
+                <span class="star" data-value="4">&#10023;</span>
+                <span class="star" data-value="5">&#10023;</span>
+            </div>
+        </div>
+        <output id="ratingOutput"></output>
+        <button id="submitButton" type="submit" style="display: none;">Submit</button>
+    </fieldset>
+    </form>
+    </rating-widget>
+</section>
+
+    <script src="./js/web.js"></script>
+</body>
+</html>
