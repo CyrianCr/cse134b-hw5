@@ -5,24 +5,8 @@ class WeatherComponent extends HTMLElement {
         this.isDayView = true;
         this.apiUrl = 'https://api.weather.gov/points/32.842674,-117.257767';
         
-        // Styles
         const style = document.createElement('style');
-        style.textContent = `
-            #ratingForm{
-                display:none;
-            }
-
-            .rating {
-                display: flex;
-                justify-content: center;
-                font-size: 3rem;
-            }
-            
-            .stars {
-                cursor: pointer;
-                color: white;
-            }
-            
+        style.textContent = `  
             section {
                 background-color: black;
                 color: white;
@@ -30,16 +14,6 @@ class WeatherComponent extends HTMLElement {
                 border: white 2px solid;
                 margin: 1rem;
                 border-radius: 0.5rem;
-            }
-
-            html {
-                background-color: darkgrey;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            
-            legend {
-                font-size: 1.2rem;
-                margin: 0.5rem;
             }
 
             article {
@@ -89,7 +63,6 @@ class WeatherComponent extends HTMLElement {
             }
         `;
 
-        // HTML
         const container = document.createElement('div');
         container.innerHTML = `
             <h1>Weather Information</h1>
