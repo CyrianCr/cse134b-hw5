@@ -58,15 +58,14 @@ starsContainer.addEventListener('click', function(event) {
         ratingOutput.textContent = "Thank you for "+selectedRatingInput.value+" rating!";
     }
 
-    const sentByInput = document.getElementById('sentByInput'); // Define sentByInput here
+    const sentByInput = document.getElementById('sentByInput');
 
-    // Add headers and set form values
-    sentByInput.value = 'JS'; // Form payload value
+    sentByInput.value = 'JS';
     fetch('https://httpbin.org/post', {
         method: 'POST',
         body: new FormData(document.getElementById('ratingForm')),
         headers: {
-            'X-Sent-By': 'JS' // Request header value
+            'X-Sent-By': 'JS'
         }
     })
     .then(response => response.json())

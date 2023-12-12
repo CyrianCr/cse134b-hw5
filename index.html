@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="./css/web.css">
 </head>
 <body>
+<noscript>
+    <h1>Weather Information</h1>
+    Current Weather Conditions Unavailable.
+</noscript>
+<weather-component></weather-component>
+<script src="./js/weathercomponent.js"></script>
 
-    <h1>Rating widget</h1>
-<section>
+    <h2>Rating widget</h2>
     <noscript>
         <rating-widget>
             <form action="https://httpbin.org/post" method="POST"> 
@@ -21,31 +26,8 @@
             </form>
         </rating-widget>
     </noscript>
-    <rating-widget>
-    <form id="ratingForm">
-        <fieldset>
-        <legend>How satisfied are you?</legend>
-        <input type="hidden" id="rating">
-        <input type="hidden" name="question" value="How satisfied are you?">
-        <input type="hidden" id="selectedRating" name="rating" value="0" required>
-        <input type="hidden" name="sentBy" id="sentByInput" value="">
+    <rating-widget></rating-widget>
 
-        <div class="rating">
-            <div class="stars" id="stars">
-                <span class="star" data-value="1">&#10023;</span>
-                <span class="star" data-value="2">&#10023;</span>
-                <span class="star" data-value="3">&#10023;</span>
-                <span class="star" data-value="4">&#10023;</span>
-                <span class="star" data-value="5">&#10023;</span>
-            </div>
-        </div>
-        <output id="ratingOutput">&nbsp;</output>
-        <button id="submitButton" type="submit" style="display: none;">Submit</button>
-    </fieldset>
-    </form>
-    </rating-widget>
-</section>
-
-    <script src="./js/web.js"></script>
+    <script src="./js/ratingcomponent.js"></script>
 </body>
 </html>
